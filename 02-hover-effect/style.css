@@ -1,0 +1,31 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f0f6ce;
+  color: #f0f6ce;
+  display: grid;
+  place-content: center;
+  height: 100vh;
+}
+
+.container {
+  width: 16vw;
+  height: 16vw;
+  background-color: #ce5700;
+  display: grid;
+  place-content: center;
+  border-radius: 100%;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.container p {
+  font-size: clamp(10rem, 5vw, 17rem);
+  transform: translateX(170px);
+}
