@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./main.css" />
+    <title>welcome loading</title>
+  </head>
+  <body>
+    <h1>Welcome</h1>
+    <div class="progress"></div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script>
+      // to : css is start and to is final
+      const progress = document.querySelector('.progress');
+      gsap.to(progress, {
+        width: '100%',
+        duration: 2,
+        ease: 'power4.out',
+      });
+
+      // from : is start and css is end
+      gsap.from('h1', {
+        y: -200, // transform : traslateY(200px)
+        duration: 2,
+        ease: 'elastic.out(1,0.3)',
+      });
+
+      gsap.to(progress, {
+        delay: 2,
+        height: '100%',
+        top: 0,
+      });
+    </script>
+  </body>
+</html>
