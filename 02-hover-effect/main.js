@@ -16,11 +16,13 @@ let textTween = gsap.to('p', {
   paused: true,
 });
 
+// hover effect
 container.addEventListener('mouseenter', () => {
   tweenContainer.play();
   textTween.play();
 });
 
+// mouse not hover
 container.addEventListener('mouseleave', () => {
   tweenContainer.reverse();
   textTween.reverse();
